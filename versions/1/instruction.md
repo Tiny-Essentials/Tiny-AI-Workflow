@@ -37,6 +37,7 @@ All code provided must follow these strict professional standards:
     "printWidth": 100,
     "singleQuote": true
   }
+  ```
 
 ## 4. DOCUMENTATION & OUTPUT FORMATTING
 - **README Style:** The tone should be "balanced-friendly"—fun and engaging, but professional and grounded (not "overly trendy" or "slang-heavy").

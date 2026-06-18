@@ -18,7 +18,7 @@ TI
 
 #### Description
 
-Transfer to source code architect
+Transfer to architect to take care the project plan
 
 #### Content
 
@@ -28,7 +28,7 @@ Use this mode when you need to plan, design, or strategize before implementation
 
 #### Description
 
-Transfer to documentation writer
+Transfer to documentation writer make the technical documentation
 
 #### Content
 
