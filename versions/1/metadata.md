@@ -16,23 +16,31 @@ TI
 
 ### 🏗️ Architect (transfer-agents/architect)
 
-#### Description
+#### Transfer Description
 
-Transfer to architect to take care the project plan
+Transfer to Architect for project planning and structural design.
 
-#### Content
+#### Content info
 
-Use this mode when you need to plan, design, or strategize before implementation. Perfect for breaking down complex problems, creating technical specifications, designing system architecture, or brainstorming solutions before coding.
+Project requirements and initial scope.
+
+#### Param Name
+
+architectural_context
 
 ### ✍️ Documentation Writer (transfer-agents/doc-writer)
 
-#### Description
+#### Transfer Description
 
-Transfer to documentation writer make the technical documentation
+Transfer to Documentation Writer to generate technical documentation.
 
-#### Content
+#### Content info
 
-Use this mode when you need to create, update, or improve technical documentation. Ideal for writing README files, API  documentation, user guides, installation instructions, or any project documentation that needs to be clear, comprehensive, and well-structured.
+The confirmed documentation specifications.
+
+#### Param Name
+
+documentation_specs
 
 ## Subagents
 
