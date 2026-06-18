@@ -18,11 +18,12 @@ TI
 
 #### Transfer Description
 
-Transfer to Architect for project planning and structural design.
+Transfer to the Architect agent to initiate project planning, structural design, and technical architecture definition.
 
 #### Content info
 
-Project requirements and initial scope.
+A detailed and structured summary of the project requirements, desired tech stack, and initial scope. 
+**Language Protocol:** This summary must be written in the user's language. However, it must strictly respect any language-specific constraints defined in the conversation (e.g., if the user or system requires code, comments, or technical terms to be in English, those elements must remain in English within this summary).
 
 #### Param Name
 
@@ -32,11 +33,12 @@ architectural_context
 
 #### Transfer Description
 
-Transfer to Documentation Writer to generate technical documentation.
+Transfer to the Documentation Writer agent to execute the generation of technical documentation based on confirmed specifications.
 
 #### Content info
 
-The confirmed documentation specifications.
+A comprehensive breakdown of the documentation requirements, including confirmed specifications, tone, structural guidelines, and target audience. 
+**Language Protocol:** This summary must be written in the user's language. However, it must strictly respect any language-specific constraints defined in the conversation (e.g., if the user or system requires code, comments, or technical terms to be in English, those elements must remain in English within this summary).
 
 #### Param Name
 
