@@ -1,0 +1,7 @@
+I've already done an experiment to take an artist's image and find out how many times the same pose as a character is redone several times on the internet, the simpler the pose, the greater the number of times it is repeated.
+we just don't realize it because the images are posted at different times, and there are people who use it to say that one artist copied another artist (and the funny part is that if the person is really telling the truth, it still has the probability is referring to the wrong artist victim).
+
+The situation is extremely worse if you are an artist who only draws canonical characters, because you don't know if there are other people on the internet who have an art style similar to yours who drew like you in the past before you.
+drawing OCs also does not keep you safe, if you do not know how to create really unique visual features, the probability that someone has made a 90% OC identical to yours increases greatly.
+
+So i believe that the training of AI images are done precisely in this way exploring this empty territory of the world of drawings. What really protects your drawing from being trained by AI is not those lots of logos and visual pollutions, but the unique art style that you draw that will make a AI Trainer is not interested in using your art style as this will destroy the training dataset. Training original art styles are dangerous precisely because they are more obvious that it is a copy of an artist, and putting it inside a generic art style dataset will slowly corrupt the entire dataset. 
