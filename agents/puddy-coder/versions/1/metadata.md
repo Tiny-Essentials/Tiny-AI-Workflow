@@ -32,6 +32,18 @@
 ### Model Configuration: Gemma4
 | Parameter | Value / Status |
 | :--- | :--- |
-| **Temperature** | 0.7 (Testing...) <br> 0.1 (30% tested) |
+| **Temperature** | 0.6 (Testing...) <br> 0.1 (30% tested) |
 | **Frequency Penalty** | 0 |
 | **Presence Penalty** | 0 |
+
+### Model Configuration: Qwen3.6
+
+From the official Qwen authors:
+**Thinking mode (default) — general tasks:**
+- `temperature=1.0, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=0.0, repetition_penalty=1.0`
+
+**Thinking mode — precise coding / WebDev:**
+- `temperature=0.6, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=0.0, repetition_penalty=1.0`
+
+**Non-thinking (Instruct) mode:**
+- `temperature=0.7, top_p=0.80, top_k=20, min_p=0.0, presence_penalty=1.5, repetition_penalty=1.0`
