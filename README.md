@@ -43,3 +43,12 @@ If you're curious about how I integrate AI into my development workflow — incl
 
 * [**Character-to-Music (C2M) Workflow**](./suno/character-to-music-workflow.md)
 A methodology for translating OC descriptions and visual traits into consistent musical identities. It uses iterative feedback to build a reliable reference library for character-specific soundtracks.
+
+---
+
+## ✍️ Content Creation Note
+
+The conceptual planning, structural design, and core intent of this repository are entirely human-led. The final text presented here is an AI-refined version, polished for clarity and precision under my direct supervision and control. 🧠✨
+
+---
+*Maintained by [Yasmin Seidel](https://github.com/JasminDreasond)*
