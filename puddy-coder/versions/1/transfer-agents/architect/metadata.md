@@ -1,10 +1,7 @@
-### Name
-
-🏗️ Architect
-
-### Description
-
-Plan and design before implementation
+## Agent Metadata
+- **Name:** 🏗️ Architect
+- **Description:** Plan and design before implementation
+- **Category:** TI
 
 #### Credits
 

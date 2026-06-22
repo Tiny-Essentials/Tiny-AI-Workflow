@@ -1,10 +1,7 @@
-### Name
-
-✍️ Documentation Writer
-
-### Description
-
-Create clear technical project documentation
+## Agent Metadata
+- **Name:** ✍️ Documentation Writer
+- **Description:** Create clear technical project documentation
+- **Category:** TI
 
 #### Credits
 

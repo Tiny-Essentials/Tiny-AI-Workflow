@@ -1,10 +1,7 @@
-### Name
-
-💻 Code
-
-### Description
-
-Write, modify, and refactor code
+## Agent Metadata
+- **Name:** 💻 Code
+- **Description:** Write, modify, and refactor code
+- **Category:** TI
 
 #### Credits
 
