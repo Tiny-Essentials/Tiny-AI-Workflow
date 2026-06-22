@@ -54,8 +54,18 @@ Name: Tiny Jasmini
 
 Email: tiny@pony.house
 
-## Agent, transfer agents and subagents Metadata
+## Tested on
 
-Tested on chatbox: LibreChat
+### Clients
 
-Tested on models: Gemma4
+LibreChat
+
+### Models
+
+Gemma4
+
+#### Temperature
+
+0.7 (Testing...)
+
+0.1 (30% tested)
