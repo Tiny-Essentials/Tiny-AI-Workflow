@@ -69,3 +69,11 @@ Gemma4
 0.7 (Testing...)
 
 0.1 (30% tested)
+
+#### Frequency Penalty
+
+0
+
+#### Presence Penalty
+
+0
