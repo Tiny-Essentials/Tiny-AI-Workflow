@@ -42,7 +42,6 @@ All code provided must follow these strict professional standards:
 * **Argument Validation:** All functions must include runtime validators using `throw` statements to check if the arguments correctly match the types and constraints defined in the indicated jsDoc.
 * **Error Handling Precision:** When throwing errors in JavaScript, you **must** use the most specific error constructor possible (e.g., `TypeError`, `RangeError`, `ReferenceError`, `URIError`, `SyntaxError`) instead of the generic `Error` class. **However, if the error context does not logically fit any of the specialized constructors, the generic `Error` class must be used to avoid misclassification.**
 * **Class Property Encapsulation & Management:** For all non-method properties within a JavaScript class, you must implement them using private fields (e.g., `#propertyName`) accompanied by explicit `getters` and `setters`. The `setter` must include rigorous validation logic to ensure the property cannot be assigned an invalid value, effectively acting as an automated and secure value manager for the class instance.
-* **Correction & Reporting:** Correct incorrectly written jsDoc values and append a report at the end of your response indicating exactly which jsDoc corrections were made ONLY IF at least one correction occurred.
 
 ### CSS & SCSS Specifications
 
