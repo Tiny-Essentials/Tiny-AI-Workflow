@@ -48,6 +48,7 @@
             "terminal": true,
             "citations": true,
             "status_updates": true,
+            "usage": true,
             "builtin_tools": true
         },
         "tags": [
@@ -67,16 +68,16 @@
     },
     "access_grants": [
         {
-            "id": "e3a09697-5f99-4b8d-a02d-4284c246e763",
+            "id": "5f031c6b-15e0-4a54-a138-3931a53c7993",
             "resource_type": "model",
             "resource_id": "hf.co/TheBloke/MythoMax-L2-13B-GGUF:Q8_0",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783730754
+            "created_at": 1783748265
         }
     ],
     "is_active": true,
-    "updated_at": 1783730754,
+    "updated_at": 1783748265,
     "created_at": 1782355402
 }

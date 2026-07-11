@@ -49,6 +49,7 @@
             "terminal": true,
             "citations": true,
             "status_updates": true,
+            "usage": true,
             "builtin_tools": true
         },
         "suggestion_prompts": null,
@@ -66,16 +67,16 @@
     },
     "access_grants": [
         {
-            "id": "2bb7c6b2-3ee6-4fd8-9235-1d6d0e2665fd",
+            "id": "2e84a702-d337-4090-a93f-d61fdb24594c",
             "resource_type": "model",
             "resource_id": "hf.co/Chun121/Qwen3-4B-RPG-Roleplay-V2:f16",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783745836
+            "created_at": 1783748237
         }
     ],
     "is_active": true,
-    "updated_at": 1783745836,
+    "updated_at": 1783748237,
     "created_at": 1782355354
 }

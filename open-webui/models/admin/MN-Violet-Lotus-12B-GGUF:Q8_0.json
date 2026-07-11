@@ -59,6 +59,7 @@
             "terminal": true,
             "citations": true,
             "status_updates": true,
+            "usage": true,
             "builtin_tools": true
         },
         "suggestion_prompts": null,
@@ -79,16 +80,16 @@
     },
     "access_grants": [
         {
-            "id": "cd15e0e7-a790-4e1b-bc1e-f3284d1e237a",
+            "id": "8d75d356-3688-4b41-aa10-7eef1a657b5a",
             "resource_type": "model",
             "resource_id": "hf.co/mradermacher/MN-Violet-Lotus-12B-GGUF:Q8_0",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783745315
+            "created_at": 1783748281
         }
     ],
     "is_active": true,
-    "updated_at": 1783745315,
+    "updated_at": 1783748281,
     "created_at": 1782355496
 }
