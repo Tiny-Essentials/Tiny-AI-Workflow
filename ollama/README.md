@@ -27,6 +27,9 @@ ollama serve
 ```
 
 ### Check allocated context length and model offloading
+
+Reference: https://docs.ollama.com/context-length#check-allocated-context-length-and-model-offloading
+
 ```bash
 export OLLAMA_CONTEXT_LENGTH=6400
 ollama serve
