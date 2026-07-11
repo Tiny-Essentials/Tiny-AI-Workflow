@@ -25,3 +25,10 @@ export OLLAMA_NUM_PARALLEL=2
 ```bash
 ollama serve
 ```
+
+### Check allocated context length and model offloading
+```bash
+export OLLAMA_CONTEXT_LENGTH=6400
+ollama serve
+ollama ps
+```
