@@ -1,0 +1,17 @@
+[Unit]
+Description=LibreChat Backend Service
+After=network.target
+ 
+[Service]
+Type=simple
+User=user
+Group=user
+WorkingDirectory=/home/user/LibreChat
+
+ExecStart=/usr/bin/npm run backend
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+ 
+[Install]
+WantedBy=multi-user.target

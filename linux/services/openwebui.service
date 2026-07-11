@@ -1,0 +1,20 @@
+[Unit]
+Description=Open WebUI Service
+After=network.target
+
+[Service]
+Type=simple
+User=user
+Group=user
+
+WorkingDirectory=/home/user/open-webui
+
+ExecStart=/home/user/.local/bin/uvx --python 3.11 open-webui@latest serve --port 3090
+Restart=always
+RestartSec=10
+Environment="DATA_DIR=/home/user/open-webui"
+Environment="PATH=/home/user/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="HOME=/home/user"
+
+[Install]
+WantedBy=multi-user.target

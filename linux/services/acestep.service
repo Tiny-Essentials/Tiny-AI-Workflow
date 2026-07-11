@@ -1,0 +1,17 @@
+[Unit]
+Description=ACE-Step Gradio UI Service
+After=network.target
+
+[Service]
+User=user
+Group=user
+
+WorkingDirectory=/home/user/ACE-Step-1.5
+ExecStart=/home/user/.local/bin/uv run acestep
+
+Restart=always
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
