@@ -8,7 +8,10 @@
         "temperature": 0.6,
         "frequency_penalty": 0,
         "presence_penalty": 0,
-        "repeat_penalty": 1
+        "repeat_penalty": 1,
+        "top_k": 64,
+        "top_p": 0.95,
+        "num_ctx": 256000
     },
     "meta": {
         "profile_image_url": null,
@@ -50,17 +53,17 @@
     },
     "access_grants": [
         {
-            "id": "df8fd66b-5939-4ee3-a6bc-c026b3582f3b",
+            "id": "c903ee4d-fdf7-40ad-822d-9e4dd0126536",
             "resource_type": "model",
             "resource_id": "puddy-coder",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783722117
+            "created_at": 1783739906
         }
     ],
     "is_active": true,
-    "updated_at": 1783722117,
+    "updated_at": 1783739906,
     "created_at": 1782368165,
     "user": {
         "id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
