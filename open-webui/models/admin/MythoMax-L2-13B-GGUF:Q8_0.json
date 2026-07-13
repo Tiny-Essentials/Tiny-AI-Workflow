@@ -40,16 +40,16 @@
         "description": "MythoMax L2 is a generative AI language model specialized for roleplaying and creative writing applications. Developed as a synthesis of two foundational models, MythoLogic-L2 and Huginn, MythoMax L2 applies an advanced tensor-based merging process to integrate their respective capabilities. The model primarily aims to enhance coherency and creative expressiveness in dialogue and narrative generation.",
         "capabilities": {
             "file_context": true,
-            "vision": true,
+            "vision": false,
             "file_upload": true,
-            "web_search": true,
-            "image_generation": true,
-            "code_interpreter": true,
-            "terminal": true,
+            "web_search": false,
+            "image_generation": false,
+            "code_interpreter": false,
+            "terminal": false,
             "citations": true,
             "status_updates": true,
             "usage": true,
-            "builtin_tools": true
+            "builtin_tools": false
         },
         "tags": [
             {
@@ -68,16 +68,16 @@
     },
     "access_grants": [
         {
-            "id": "5f031c6b-15e0-4a54-a138-3931a53c7993",
+            "id": "7e932939-4529-41e5-b696-e8a85412d883",
             "resource_type": "model",
             "resource_id": "hf.co/TheBloke/MythoMax-L2-13B-GGUF:Q8_0",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783748265
+            "created_at": 1783915844
         }
     ],
     "is_active": true,
-    "updated_at": 1783748265,
+    "updated_at": 1783915844,
     "created_at": 1782355402
 }

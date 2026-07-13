@@ -51,16 +51,16 @@
         "description": "This is the model I was trying to create when Chunky-Lotus emerged. Not only does this model score higher on my local EQ benchmarks (80.00 w/ 100% parsed @ 8-bit), but it does an even better job at roleplaying and producing creative outputs while still adhering to wide ranges of character personalities. The high levels of emotional intelligence are really quite noticeable as well. It balances creative prose with strict logical adherence. Most general-purpose models act like assistants. Violet Lotus acts like a living, breathing character. This is why it is consistently ranked among the best models for AI roleplay.",
         "capabilities": {
             "file_context": true,
-            "vision": true,
+            "vision": false,
             "file_upload": true,
-            "web_search": true,
-            "image_generation": true,
-            "code_interpreter": true,
-            "terminal": true,
+            "web_search": false,
+            "image_generation": false,
+            "code_interpreter": false,
+            "terminal": false,
             "citations": true,
             "status_updates": true,
             "usage": true,
-            "builtin_tools": true
+            "builtin_tools": false
         },
         "suggestion_prompts": null,
         "tags": [
@@ -80,16 +80,16 @@
     },
     "access_grants": [
         {
-            "id": "8d75d356-3688-4b41-aa10-7eef1a657b5a",
+            "id": "df140954-8090-413f-8227-36320bf8e642",
             "resource_type": "model",
             "resource_id": "hf.co/mradermacher/MN-Violet-Lotus-12B-GGUF:Q8_0",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783748281
+            "created_at": 1783915736
         }
     ],
     "is_active": true,
-    "updated_at": 1783748281,
+    "updated_at": 1783915736,
     "created_at": 1782355496
 }

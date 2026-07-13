@@ -41,16 +41,16 @@
         "description": "Welcome, fellow creators! I'm Chun (@chun121), and I've fine-tuned the impressive Qwen3-4B model to excel at character-based conversations and roleplay scenarios. Whether you're crafting an immersive game, building an interactive storytelling platform, or developing character-driven AI experiences, this model will help your characters speak with personality, consistency, and depth.",
         "capabilities": {
             "file_context": true,
-            "vision": true,
+            "vision": false,
             "file_upload": true,
-            "web_search": true,
-            "image_generation": true,
-            "code_interpreter": true,
-            "terminal": true,
+            "web_search": false,
+            "image_generation": false,
+            "code_interpreter": false,
+            "terminal": false,
             "citations": true,
             "status_updates": true,
             "usage": true,
-            "builtin_tools": true
+            "builtin_tools": false
         },
         "suggestion_prompts": null,
         "tags": [
@@ -67,16 +67,16 @@
     },
     "access_grants": [
         {
-            "id": "2e84a702-d337-4090-a93f-d61fdb24594c",
+            "id": "3254404a-2567-4474-9ae6-bb81d1cc65eb",
             "resource_type": "model",
             "resource_id": "hf.co/Chun121/Qwen3-4B-RPG-Roleplay-V2:f16",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783748237
+            "created_at": 1783915916
         }
     ],
     "is_active": true,
-    "updated_at": 1783748237,
+    "updated_at": 1783915916,
     "created_at": 1782355354
 }
