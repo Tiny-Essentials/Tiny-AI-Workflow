@@ -47,29 +47,32 @@
                 "name": "worker"
             }
         ],
-        "skillIds": [
-            "user-computer"
-        ]
+        "builtinTools": {
+            "notes": false,
+            "knowledge": false,
+            "image_generation": false,
+            "channels": false
+        }
     },
     "access_grants": [
         {
-            "id": "c903ee4d-fdf7-40ad-822d-9e4dd0126536",
+            "id": "c3c1c1c6-c2c8-40f9-b6d3-c94526417534",
             "resource_type": "model",
             "resource_id": "puddy-coder",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783739906
+            "created_at": 1783912469
         }
     ],
     "is_active": true,
-    "updated_at": 1783739906,
+    "updated_at": 1783912469,
     "created_at": 1782368165,
     "user": {
         "id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
         "name": "Tiny Jasmini",
-        "role": "admin",
-        "email": "jasmindreasond@proton.me"
+        "role": "user",
+        "email": "jasmindreasond@pony.house"
     },
     "write_access": true
 }
