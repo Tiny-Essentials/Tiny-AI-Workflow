@@ -1,6 +1,6 @@
 {
     "id": "gemma4:26b-a4b-it-q8_0",
-    "name": "Gemma4",
+    "name": "Gemma4 26B",
     "object": "model",
     "created": 0,
     "owned_by": "ollama",
@@ -59,20 +59,23 @@
             {
                 "name": "Gemma"
             }
+        ],
+        "defaultFeatureIds": [
+            "web_search"
         ]
     },
     "access_grants": [
         {
-            "id": "2fdad4b6-ec8f-4a68-87da-bb3c48278172",
+            "id": "003568fa-26b4-45a1-9b59-19d5a2992301",
             "resource_type": "model",
             "resource_id": "gemma4:26b-a4b-it-q8_0",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783731051
+            "created_at": 1783908664
         }
     ],
     "is_active": true,
-    "updated_at": 1783731051,
+    "updated_at": 1783908664,
     "created_at": 1782355030
 }
