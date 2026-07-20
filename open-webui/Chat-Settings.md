@@ -29,6 +29,16 @@ To replicate my interface, navigate to your OpenWebUI settings and apply the fol
 | **Stylized PDF Export** | `Enabled` | Better documentation output. |
 | **Floating Quick Actions** | `Managed` | Customizes your workflow efficiency. |
 
+## 🧩 Artifacts Configuration
+
+For users performing manual **render tests** or requiring high-speed code execution previews, these settings optimize the sandbox environment.
+
+| Setting | Value | Purpose / Benefit |
+| :--- | :--- | :--- |
+| **Detect Artifacts Automatically** | `Disabled` | **Minimizes latency.** Prevents the AI from constantly scanning responses, which is ideal when you are manually triggering or testing renders. |
+| **iframe Sandbox Allow Same Origin** | `Enabled` | **Ensures functionality.** Allows rendered components to access the same origin, which is necessary for complex web previews. |
+| **iframe Sandbox Allow Forms** | `Enabled` | **Enables interaction.** Allows the use of interactive elements (like buttons and inputs) within the rendered artifact. |
+
 ## 🚀 Why these settings?
 
 Most users enable every "Auto-Generation" feature available. However, every time the AI generates a "Follow-up question" or a "Chat Tag," it consumes extra processing time and resources. 
