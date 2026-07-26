@@ -1,15 +1,15 @@
 {
-    "id": "gemma4:26b-a4b-it-q8_0",
-    "name": "Gemma4 26B",
+    "id": "gemma4:26b-a4b-it-bf16",
+    "name": "Gemma4 BF16",
     "object": "model",
     "created": 0,
     "owned_by": "ollama",
     "ollama": {
-        "name": "gemma4:26b-a4b-it-q8_0",
-        "model": "gemma4:26b-a4b-it-q8_0",
-        "modified_at": "2026-06-17T14:53:55.069863218-05:00",
-        "size": 28052911389,
-        "digest": "6bfaf9a8cb378e03991da10daa94ea8e85905276d6baaeed67f0b3ae9996fede",
+        "name": "gemma4:26b-a4b-it-bf16",
+        "model": "gemma4:26b-a4b-it-bf16",
+        "modified_at": "2026-07-10T17:12:00.248571594-05:00",
+        "size": 51698185975,
+        "digest": "05d829735ad89547cdba50ac3ff9b36ea1e96f68146df506288cc1001e2c6efa",
         "details": {
             "parent_model": "",
             "format": "gguf",
@@ -18,27 +18,27 @@
                 "gemma4"
             ],
             "parameter_size": "25.8B",
-            "quantization_level": "Q8_0"
+            "quantization_level": "F16"
         },
         "capabilities": [
             "completion",
             "tools",
             "thinking"
         ],
-        "connection_type": "local",
+        "connection_type": "external",
         "urls": [
-            0
+            1
         ]
     },
     "loaded": false,
-    "connection_type": "local",
+    "connection_type": "external",
     "tags": [],
     "user_id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
     "base_model_id": null,
     "params": {
-        "temperature": 1,
-        "top_k": 64,
         "top_p": 0.95,
+        "top_k": 64,
+        "temperature": 1,
         "num_ctx": 262144
     },
     "meta": {
@@ -57,6 +57,7 @@
             "usage": true,
             "builtin_tools": true
         },
+        "suggestion_prompts": null,
         "tags": [
             {
                 "name": "Google"
@@ -71,16 +72,16 @@
     },
     "access_grants": [
         {
-            "id": "003568fa-26b4-45a1-9b59-19d5a2992301",
+            "id": "125a0e9d-bcd7-4c3c-97f7-08e8204b52db",
             "resource_type": "model",
-            "resource_id": "gemma4:26b-a4b-it-q8_0",
+            "resource_id": "gemma4:26b-a4b-it-bf16",
             "principal_type": "user",
             "principal_id": "*",
             "permission": "read",
-            "created_at": 1783908664
+            "created_at": 1785029429
         }
     ],
-    "is_active": true,
-    "updated_at": 1785029391,
-    "created_at": 1782355030
+    "is_active": false,
+    "updated_at": 1785029429,
+    "created_at": 1783721654
 }

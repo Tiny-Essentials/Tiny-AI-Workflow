@@ -18,8 +18,13 @@
                 "qwen3"
             ],
             "parameter_size": "4.02B",
-            "quantization_level": "unknown"
+            "quantization_level": "F16",
+            "context_length": 32768,
+            "embedding_length": 2560
         },
+        "capabilities": [
+            "completion"
+        ],
         "connection_type": "local",
         "urls": [
             0
@@ -77,6 +82,6 @@
         }
     ],
     "is_active": true,
-    "updated_at": 1783915916,
+    "updated_at": 1783915913,
     "created_at": 1782355354
 }

@@ -18,8 +18,13 @@
                 "llama"
             ],
             "parameter_size": "13B",
-            "quantization_level": "unknown"
+            "quantization_level": "Q8_0",
+            "context_length": 4096,
+            "embedding_length": 5120
         },
+        "capabilities": [
+            "completion"
+        ],
         "connection_type": "local",
         "urls": [
             0
@@ -64,7 +69,11 @@
             {
                 "name": "l2"
             }
-        ]
+        ],
+        "builtinTools": {
+            "calendar": false,
+            "automations": false
+        }
     },
     "access_grants": [
         {
@@ -78,6 +87,6 @@
         }
     ],
     "is_active": true,
-    "updated_at": 1783915844,
+    "updated_at": 1783915848,
     "created_at": 1782355402
 }
