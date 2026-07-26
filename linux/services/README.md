@@ -1,15 +1,29 @@
-# Recommended
+# Recommended Software Stack
 
-## Text AI (Maybe you need the ollama installed)
+> **Installation Note:** To ensure system stability and optimal dependency management, always attempt to install software via its official repository or native package manager before proceeding with manual configurations.
 
-1 - Open WebUI (Needs `uvx` and `nodejs`)
+## LLM Interfaces (Text-based AI)
+*These interfaces require a backend provider; it is recommended to have [Ollama](https://ollama.com/) installed as the primary model runner.*
 
-2 - LibreChat (Needs `nodejs`)
+### 1. Open WebUI
+A highly customizable interface for interacting with Large Language Models that supports multiple providers.
+- **Prerequisites:** `uvx`, Node.js
 
-## Music (I haven't fully mastered the software yet)
+### 2. LibreChat
+An advanced, open-source AI chat interface that supports multiple providers.
+- **Prerequisites:** Node.js
 
-1 - Ace Step 1.5 (Needs `uv`)
+## Audio Synthesis & Music Generation
 
-## General Stuff
+### 1. Ace Step 1.5
+High-fidelity audio generation tool.
+- **Prerequisites:** `uv`
 
-1 - ComfyUI (runs it `comfy/install.sh`)
+## Generative Media Tools
+
+### 1. ComfyUI
+A modular, node-based GUI for Stable Diffusion and other generative media workflows.
+- **Installation Method:** It is highly recommended to use the provided automation script in the repository for setup:
+  ```bash
+  ./comfy/install.sh
+  ```
