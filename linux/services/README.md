@@ -1,6 +1,6 @@
 # Recommended
 
-## Text AI
+## Text AI (Maybe you need the ollama installed)
 
 1 - Open WebUI
 
