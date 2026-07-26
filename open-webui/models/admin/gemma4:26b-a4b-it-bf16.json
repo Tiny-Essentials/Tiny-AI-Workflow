@@ -71,17 +71,7 @@
                 "web_search"
             ]
         },
-        "access_grants": [
-            {
-                "id": "125a0e9d-bcd7-4c3c-97f7-08e8204b52db",
-                "resource_type": "model",
-                "resource_id": "gemma4:26b-a4b-it-bf16",
-                "principal_type": "user",
-                "principal_id": "*",
-                "permission": "read",
-                "created_at": 1785029429
-            }
-        ],
+        "access_grants": [],
         "is_active": false,
         "updated_at": 1785029429,
         "created_at": 1783721654

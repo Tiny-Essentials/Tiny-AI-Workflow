@@ -76,17 +76,7 @@
                 "automations": false
             }
         },
-        "access_grants": [
-            {
-                "id": "7e932939-4529-41e5-b696-e8a85412d883",
-                "resource_type": "model",
-                "resource_id": "hf.co/TheBloke/MythoMax-L2-13B-GGUF:Q8_0",
-                "principal_type": "user",
-                "principal_id": "*",
-                "permission": "read",
-                "created_at": 1783915844
-            }
-        ],
+        "access_grants": [],
         "is_active": true,
         "updated_at": 1783915848,
         "created_at": 1782355402

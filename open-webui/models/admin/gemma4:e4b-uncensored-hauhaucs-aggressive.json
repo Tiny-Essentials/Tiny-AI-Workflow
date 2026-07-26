@@ -75,17 +75,7 @@
                 "web_search"
             ]
         },
-        "access_grants": [
-            {
-                "id": "5e92fe78-5359-43e0-852c-58153ca5f514",
-                "resource_type": "model",
-                "resource_id": "hf.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive:Q6_K_P",
-                "principal_type": "group",
-                "principal_id": "2170ff05-0309-429d-af49-1b3781762b46",
-                "permission": "read",
-                "created_at": 1785045377
-            }
-        ],
+        "access_grants": [],
         "is_active": true,
         "updated_at": 1785045377,
         "created_at": 1785044450

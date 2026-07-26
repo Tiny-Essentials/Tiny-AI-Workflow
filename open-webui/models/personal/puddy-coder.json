@@ -55,17 +55,7 @@
                 "channels": false
             }
         },
-        "access_grants": [
-            {
-                "id": "c3c1c1c6-c2c8-40f9-b6d3-c94526417534",
-                "resource_type": "model",
-                "resource_id": "puddy-coder",
-                "principal_type": "user",
-                "principal_id": "*",
-                "permission": "read",
-                "created_at": 1783912469
-            }
-        ],
+        "access_grants": [],
         "is_active": true,
         "updated_at": 1785031393,
         "created_at": 1782368165,

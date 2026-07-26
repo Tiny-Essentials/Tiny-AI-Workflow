@@ -63,17 +63,7 @@
                 }
             ]
         },
-        "access_grants": [
-            {
-                "id": "3c2dfd15-089c-4e69-87ae-9c8f23840ef3",
-                "resource_type": "model",
-                "resource_id": "qwen3.6:27b-q8_0",
-                "principal_type": "user",
-                "principal_id": "*",
-                "permission": "read",
-                "created_at": 1783749008
-            }
-        ],
+        "access_grants": [],
         "is_active": true,
         "updated_at": 1783749008,
         "created_at": 1783747322
