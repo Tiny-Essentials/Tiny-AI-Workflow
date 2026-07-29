@@ -60,6 +60,7 @@
                 "citations": true,
                 "status_updates": true,
                 "usage": true,
+                "memory": true,
                 "builtin_tools": true
             },
             "suggestion_prompts": null,

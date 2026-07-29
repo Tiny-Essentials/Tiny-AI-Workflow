@@ -1,42 +1,9 @@
 [
     {
         "id": "hf.co/mradermacher/music-flamingo-hf-GGUF:Q8_0",
-        "name": "Music Flamingo Q8",
-        "object": "model",
-        "created": 0,
-        "owned_by": "ollama",
-        "ollama": {
-            "name": "hf.co/mradermacher/music-flamingo-hf-GGUF:Q8_0",
-            "model": "hf.co/mradermacher/music-flamingo-hf-GGUF:Q8_0",
-            "modified_at": "2026-07-17T23:56:45.384075872Z",
-            "size": 8813870368,
-            "digest": "a787e6618daa90394e6d9b966161644035980255ef1a1927c54c3b91ef3a38a2",
-            "details": {
-                "parent_model": "",
-                "format": "gguf",
-                "family": "qwen2",
-                "families": [
-                    "qwen2"
-                ],
-                "parameter_size": "7.61B",
-                "quantization_level": "unknown",
-                "context_length": 32768,
-                "embedding_length": 3584
-            },
-            "capabilities": [
-                "completion",
-                "vision"
-            ],
-            "connection_type": "local",
-            "urls": [
-                0
-            ]
-        },
-        "loaded": false,
-        "connection_type": "local",
-        "tags": [],
         "user_id": "b997ae0e-caf3-4bfe-8450-4ebffa215d7c",
         "base_model_id": null,
+        "name": "Music Flamingo Q8",
         "params": {
             "num_ctx": 32768
         },
@@ -54,8 +21,10 @@
                 "citations": true,
                 "status_updates": true,
                 "usage": true,
+                "memory": false,
                 "builtin_tools": false
             },
+            "knowledge": null,
             "suggestion_prompts": null,
             "tags": [
                 {
@@ -74,7 +43,9 @@
         },
         "access_grants": [],
         "is_active": true,
-        "updated_at": 1785043363,
-        "created_at": 1784109012
+        "updated_at": 1785306594,
+        "created_at": 1784109012,
+        "user": null,
+        "write_access": true
     }
 ]

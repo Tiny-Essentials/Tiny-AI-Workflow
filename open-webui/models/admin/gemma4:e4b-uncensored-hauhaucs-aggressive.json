@@ -1,42 +1,9 @@
 [
     {
         "id": "hf.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive:Q6_K_P",
-        "name": "Gemma4 E4B Uncensored Q6",
-        "object": "model",
-        "created": 0,
-        "owned_by": "ollama",
-        "ollama": {
-            "name": "hf.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive:Q6_K_P",
-            "model": "hf.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive:Q6_K_P",
-            "modified_at": "2026-07-26T05:39:24.885455449Z",
-            "size": 7240084200,
-            "digest": "dff81c432f07065666d9d3bc1eb81b9a8e51ec3b6db59e40eed41d28cedfcbf1",
-            "details": {
-                "parent_model": "",
-                "format": "gguf",
-                "family": "gemma4",
-                "families": [
-                    "gemma4"
-                ],
-                "parameter_size": "7.52B",
-                "quantization_level": "unknown",
-                "context_length": 131072,
-                "embedding_length": 2560
-            },
-            "capabilities": [
-                "completion",
-                "vision"
-            ],
-            "connection_type": "local",
-            "urls": [
-                0
-            ]
-        },
-        "loaded": false,
-        "connection_type": "local",
-        "tags": [],
         "user_id": "b997ae0e-caf3-4bfe-8450-4ebffa215d7c",
         "base_model_id": null,
+        "name": "Gemma4 E4B Uncensored Q6",
         "params": {
             "temperature": 1,
             "top_p": 0.95,
@@ -45,7 +12,7 @@
         },
         "meta": {
             "profile_image_url": "data:image/webp;base64,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",
-            "description": "Gemma 4 models are designed to deliver frontier-level performance at each size. They are well-suited for reasoning, agentic workflows, coding, and multimodal understanding.",
+            "description": "Gemma 4 models are designed to deliver frontier-level performance at each size. They are well-suited for reasoning, agentic workflows, coding, and multimodal understanding.\n\nNo changes to datasets or capabilities. Fully functional, 100% of what the original authors intended - just without the refusals.\n\nStronger uncensoring — model is fully unlocked and won't refuse prompts. May occasionally append short disclaimers (baked into base model training, not refusals) but full content is always generated.",
             "capabilities": {
                 "file_context": true,
                 "vision": true,
@@ -57,8 +24,10 @@
                 "citations": true,
                 "status_updates": true,
                 "usage": true,
+                "memory": true,
                 "builtin_tools": true
             },
+            "knowledge": null,
             "suggestion_prompts": null,
             "tags": [
                 {
@@ -77,7 +46,9 @@
         },
         "access_grants": [],
         "is_active": true,
-        "updated_at": 1785045377,
-        "created_at": 1785044450
+        "updated_at": 1785307804,
+        "created_at": 1785044450,
+        "user": null,
+        "write_access": true
     }
 ]

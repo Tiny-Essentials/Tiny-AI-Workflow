@@ -1,42 +1,9 @@
 [
     {
         "id": "hf.co/mradermacher/MN-Violet-Lotus-12B-GGUF:Q6_K",
-        "name": "MN Violet Lotus Q6",
-        "object": "model",
-        "created": 0,
-        "owned_by": "ollama",
-        "ollama": {
-            "name": "hf.co/mradermacher/MN-Violet-Lotus-12B-GGUF:Q6_K",
-            "model": "hf.co/mradermacher/MN-Violet-Lotus-12B-GGUF:Q6_K",
-            "modified_at": "2026-06-27T05:23:04.920711916Z",
-            "size": 10056216053,
-            "digest": "fa1c8508983e78b58f3c77641772100b7aa58759517f88f0634bb637662abd16",
-            "details": {
-                "parent_model": "",
-                "format": "gguf",
-                "family": "llama",
-                "families": [
-                    "llama"
-                ],
-                "parameter_size": "12.2B",
-                "quantization_level": "Q6_K",
-                "context_length": 131072,
-                "embedding_length": 5120
-            },
-            "capabilities": [
-                "completion",
-                "tools"
-            ],
-            "connection_type": "local",
-            "urls": [
-                0
-            ]
-        },
-        "loaded": false,
-        "connection_type": "local",
-        "tags": [],
         "user_id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
         "base_model_id": null,
+        "name": "MN Violet Lotus Q6",
         "params": {
             "temperature": 0.8,
             "max_tokens": 560,
@@ -67,8 +34,10 @@
                 "citations": true,
                 "status_updates": true,
                 "usage": true,
+                "memory": false,
                 "builtin_tools": false
             },
+            "knowledge": null,
             "suggestion_prompts": null,
             "tags": [
                 {
@@ -84,7 +53,9 @@
         },
         "access_grants": [],
         "is_active": true,
-        "updated_at": 1785028972,
-        "created_at": 1783758318
+        "updated_at": 1785307569,
+        "created_at": 1783758318,
+        "user": null,
+        "write_access": true
     }
 ]

@@ -1,41 +1,9 @@
 [
     {
         "id": "gemma4:e4b-it-q8_0",
-        "name": "Gemma4 E4B Q8",
-        "object": "model",
-        "created": 0,
-        "owned_by": "ollama",
-        "ollama": {
-            "name": "gemma4:e4b-it-q8_0",
-            "model": "gemma4:e4b-it-q8_0",
-            "modified_at": "2026-06-27T04:44:24.604903849Z",
-            "size": 11636116476,
-            "digest": "9dcc35808b42e8975f1e9dd9d7866925a8d0704b6bb3613525323f355dde3923",
-            "details": {
-                "parent_model": "",
-                "format": "gguf",
-                "family": "gemma4",
-                "families": [
-                    "gemma4"
-                ],
-                "parameter_size": "8.0B",
-                "quantization_level": "Q8_0"
-            },
-            "capabilities": [
-                "completion",
-                "tools",
-                "thinking"
-            ],
-            "connection_type": "local",
-            "urls": [
-                0
-            ]
-        },
-        "loaded": false,
-        "connection_type": "local",
-        "tags": [],
         "user_id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
         "base_model_id": null,
+        "name": "Gemma4 E4B Q8",
         "params": {
             "num_ctx": 131072,
             "top_p": 0.95,
@@ -56,8 +24,10 @@
                 "citations": true,
                 "status_updates": true,
                 "usage": true,
+                "memory": true,
                 "builtin_tools": true
             },
+            "knowledge": null,
             "suggestion_prompts": null,
             "tags": [
                 {
@@ -73,7 +43,9 @@
         },
         "access_grants": [],
         "is_active": true,
-        "updated_at": 1785030297,
-        "created_at": 1783758237
+        "updated_at": 1785308446,
+        "created_at": 1783758237,
+        "user": null,
+        "write_access": true
     }
 ]

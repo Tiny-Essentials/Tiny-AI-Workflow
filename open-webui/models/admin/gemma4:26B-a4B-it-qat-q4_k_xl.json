@@ -1,42 +1,9 @@
 [
     {
         "id": "hf.co/unsloth/gemma-4-26B-A4B-it-qat-GGUF:UD-Q4_K_XL",
-        "name": "Gemma4 26B A4B IT QAT Q4 K XL",
-        "object": "model",
-        "created": 0,
-        "owned_by": "ollama",
-        "ollama": {
-            "name": "hf.co/unsloth/gemma-4-26B-A4B-it-qat-GGUF:UD-Q4_K_XL",
-            "model": "hf.co/unsloth/gemma-4-26B-A4B-it-qat-GGUF:UD-Q4_K_XL",
-            "modified_at": "2026-07-10T23:25:46.51824254Z",
-            "size": 15443874216,
-            "digest": "ec94fe5da7eb9c046c7b28fb2e1b132a0ebb602d5ab4ebbb6173305304c3ab3e",
-            "details": {
-                "parent_model": "",
-                "format": "gguf",
-                "family": "gemma4",
-                "families": [
-                    "gemma4"
-                ],
-                "parameter_size": "25.2B",
-                "quantization_level": "unknown",
-                "context_length": 262144,
-                "embedding_length": 2816
-            },
-            "capabilities": [
-                "completion",
-                "vision"
-            ],
-            "connection_type": "local",
-            "urls": [
-                0
-            ]
-        },
-        "loaded": false,
-        "connection_type": "local",
-        "tags": [],
         "user_id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
         "base_model_id": null,
+        "name": "Gemma4 26B A4B IT QAT Q4 K XL",
         "params": {
             "top_k": 64,
             "top_p": 0.95,
@@ -57,8 +24,10 @@
                 "citations": true,
                 "status_updates": true,
                 "usage": true,
+                "memory": true,
                 "builtin_tools": true
             },
+            "knowledge": null,
             "suggestion_prompts": null,
             "tags": [
                 {
@@ -74,7 +43,9 @@
         },
         "access_grants": [],
         "is_active": true,
-        "updated_at": 1785029917,
-        "created_at": 1783758359
+        "updated_at": 1785306580,
+        "created_at": 1783758359,
+        "user": null,
+        "write_access": true
     }
 ]

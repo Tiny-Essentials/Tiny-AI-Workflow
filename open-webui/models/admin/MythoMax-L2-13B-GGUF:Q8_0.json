@@ -55,6 +55,7 @@
                 "citations": true,
                 "status_updates": true,
                 "usage": true,
+                "memory": false,
                 "builtin_tools": false
             },
             "tags": [
