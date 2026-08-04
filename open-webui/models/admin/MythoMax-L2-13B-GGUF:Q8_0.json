@@ -1,41 +1,9 @@
 [
     {
         "id": "hf.co/TheBloke/MythoMax-L2-13B-GGUF:Q8_0",
-        "name": "MythoMax L2",
-        "object": "model",
-        "created": 0,
-        "owned_by": "ollama",
-        "ollama": {
-            "name": "hf.co/TheBloke/MythoMax-L2-13B-GGUF:Q8_0",
-            "model": "hf.co/TheBloke/MythoMax-L2-13B-GGUF:Q8_0",
-            "modified_at": "2026-06-15T21:43:16.045997986-05:00",
-            "size": 13831319824,
-            "digest": "e649cb80c330f15dc47299c04c27c59e0020fd2128b54cddfc71c08344d3d778",
-            "details": {
-                "parent_model": "",
-                "format": "gguf",
-                "family": "llama",
-                "families": [
-                    "llama"
-                ],
-                "parameter_size": "13B",
-                "quantization_level": "Q8_0",
-                "context_length": 4096,
-                "embedding_length": 5120
-            },
-            "capabilities": [
-                "completion"
-            ],
-            "connection_type": "local",
-            "urls": [
-                0
-            ]
-        },
-        "loaded": false,
-        "connection_type": "local",
-        "tags": [],
         "user_id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
         "base_model_id": null,
+        "name": "MythoMax L2",
         "params": {
             "temperature": 0.7,
             "repeat_penalty": 1.1,
@@ -58,6 +26,7 @@
                 "memory": false,
                 "builtin_tools": false
             },
+            "knowledge": null,
             "tags": [
                 {
                     "name": "roleplay"
@@ -79,7 +48,9 @@
         },
         "access_grants": [],
         "is_active": true,
-        "updated_at": 1783915848,
-        "created_at": 1782355402
+        "updated_at": 1785106246,
+        "created_at": 1782355402,
+        "user": null,
+        "write_access": true
     }
 ]

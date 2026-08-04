@@ -1,41 +1,9 @@
 [
     {
         "id": "hf.co/Chun121/Qwen3-4B-RPG-Roleplay-V2:f16",
-        "name": "Qwen3 RPG Roleplay V2",
-        "object": "model",
-        "created": 0,
-        "owned_by": "ollama",
-        "ollama": {
-            "name": "hf.co/Chun121/Qwen3-4B-RPG-Roleplay-V2:f16",
-            "model": "hf.co/Chun121/Qwen3-4B-RPG-Roleplay-V2:f16",
-            "modified_at": "2026-06-17T19:58:29.448929652-05:00",
-            "size": 8051281591,
-            "digest": "42856d16895da04b920e5041aea95cdf7a997623964349e0f8ff1110c0ac8fc5",
-            "details": {
-                "parent_model": "",
-                "format": "gguf",
-                "family": "qwen3",
-                "families": [
-                    "qwen3"
-                ],
-                "parameter_size": "4.02B",
-                "quantization_level": "F16",
-                "context_length": 32768,
-                "embedding_length": 2560
-            },
-            "capabilities": [
-                "completion"
-            ],
-            "connection_type": "local",
-            "urls": [
-                0
-            ]
-        },
-        "loaded": false,
-        "connection_type": "local",
-        "tags": [],
         "user_id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
         "base_model_id": null,
+        "name": "Qwen3 RPG Roleplay V2",
         "params": {
             "max_tokens": 256,
             "temperature": 0.8,
@@ -59,6 +27,7 @@
                 "memory": false,
                 "builtin_tools": false
             },
+            "knowledge": null,
             "suggestion_prompts": null,
             "tags": [
                 {
@@ -74,7 +43,9 @@
         },
         "access_grants": [],
         "is_active": true,
-        "updated_at": 1783915913,
-        "created_at": 1782355354
+        "updated_at": 1785106246,
+        "created_at": 1782355354,
+        "user": null,
+        "write_access": true
     }
 ]

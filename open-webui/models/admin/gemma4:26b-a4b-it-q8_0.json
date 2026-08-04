@@ -1,41 +1,9 @@
 [
     {
         "id": "gemma4:26b-a4b-it-q8_0",
-        "name": "Gemma4 26B",
-        "object": "model",
-        "created": 0,
-        "owned_by": "ollama",
-        "ollama": {
-            "name": "gemma4:26b-a4b-it-q8_0",
-            "model": "gemma4:26b-a4b-it-q8_0",
-            "modified_at": "2026-06-17T14:53:55.069863218-05:00",
-            "size": 28052911389,
-            "digest": "6bfaf9a8cb378e03991da10daa94ea8e85905276d6baaeed67f0b3ae9996fede",
-            "details": {
-                "parent_model": "",
-                "format": "gguf",
-                "family": "gemma4",
-                "families": [
-                    "gemma4"
-                ],
-                "parameter_size": "25.8B",
-                "quantization_level": "Q8_0"
-            },
-            "capabilities": [
-                "completion",
-                "tools",
-                "thinking"
-            ],
-            "connection_type": "local",
-            "urls": [
-                0
-            ]
-        },
-        "loaded": false,
-        "connection_type": "local",
-        "tags": [],
         "user_id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
         "base_model_id": null,
+        "name": "Gemma4 26B",
         "params": {
             "temperature": 1,
             "top_k": 64,
@@ -56,9 +24,9 @@
                 "citations": true,
                 "status_updates": true,
                 "usage": true,
-                "memory": true,
                 "builtin_tools": true
             },
+            "knowledge": null,
             "tags": [
                 {
                     "name": "Google"
@@ -73,7 +41,9 @@
         },
         "access_grants": [],
         "is_active": true,
-        "updated_at": 1785029391,
-        "created_at": 1782355030
+        "updated_at": 1785106246,
+        "created_at": 1782355030,
+        "user": null,
+        "write_access": true
     }
 ]

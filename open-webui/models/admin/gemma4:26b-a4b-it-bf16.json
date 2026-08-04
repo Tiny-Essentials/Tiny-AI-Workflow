@@ -1,41 +1,9 @@
 [
     {
         "id": "gemma4:26b-a4b-it-bf16",
-        "name": "Gemma4 BF16",
-        "object": "model",
-        "created": 0,
-        "owned_by": "ollama",
-        "ollama": {
-            "name": "gemma4:26b-a4b-it-bf16",
-            "model": "gemma4:26b-a4b-it-bf16",
-            "modified_at": "2026-07-10T17:12:00.248571594-05:00",
-            "size": 51698185975,
-            "digest": "05d829735ad89547cdba50ac3ff9b36ea1e96f68146df506288cc1001e2c6efa",
-            "details": {
-                "parent_model": "",
-                "format": "gguf",
-                "family": "gemma4",
-                "families": [
-                    "gemma4"
-                ],
-                "parameter_size": "25.8B",
-                "quantization_level": "F16"
-            },
-            "capabilities": [
-                "completion",
-                "tools",
-                "thinking"
-            ],
-            "connection_type": "external",
-            "urls": [
-                1
-            ]
-        },
-        "loaded": false,
-        "connection_type": "external",
-        "tags": [],
         "user_id": "6aa054a2-7906-417b-8b7f-ecefc666afab",
         "base_model_id": null,
+        "name": "Gemma4 BF16",
         "params": {
             "top_p": 0.95,
             "top_k": 64,
@@ -59,6 +27,7 @@
                 "memory": true,
                 "builtin_tools": true
             },
+            "knowledge": null,
             "suggestion_prompts": null,
             "tags": [
                 {
@@ -74,7 +43,9 @@
         },
         "access_grants": [],
         "is_active": false,
-        "updated_at": 1785029429,
-        "created_at": 1783721654
+        "updated_at": 1785106246,
+        "created_at": 1783721654,
+        "user": null,
+        "write_access": true
     }
 ]
