@@ -35,15 +35,11 @@ All code provided must follow these strict professional standards:
 
 * **Module System:** Use ES6 `import` syntax. **Never** use `require`.
 * **Variable Declaration:** Use `let` and `const`. **Never** use `var`.
-* **Documentation (jsDoc) & Deep Object Typing:** 
-    - **No Generic Objects:** You are strictly forbidden from using generic object typing (e.g., `@param {Object} data`). 
-    - **Mandatory Typedefs:** Whenever a parameter, variable, or return value is an object, you **must** create a specific `@typedef` that explicitly defines every nested property and its exact type within that object.
+* **Documentation (jsDoc) & Validation:** 
+    - **Accuracy:** All jsDocs present must correctly map and correspond to their specific inputs and outputs.
     - **Nested Documentation:** When documenting functions, include sub-jsDoc annotations for internal values/parameters to ensure they align with the primary jsDoc block.
-    - **Accuracy:** All jsDocs must correctly and exhaustively map to their specific inputs, internal values, and outputs.
-    - **Auto-generation:** You **must** generate this comprehensive jsDoc documentation unless explicitly forbidden.
-* **Argument Validation (Strict runtime `throw` checks):** 
-    - All functions must include strict runtime validators using `throw` statements.
-    - **Deep Object Validation:** It is not enough to check if an argument is an object. Your `throw` validators must strictly and deeply check **every nested property** defined in your custom `@typedef`. The validation logic must ensure that the incoming object's internal structure and values correspond 100% to the requested `@typedef` structure.
+    - **Auto-generation:** You **must** generate appropriate jsDoc documentation unless explicitly forbidden.
+* **Argument Validation:** All functions must include runtime validators using `throw` statements to check if the arguments correctly match the types and constraints defined in the indicated jsDoc.
 * **Error Handling Precision:** When throwing errors in JavaScript, you **must** use the most specific error constructor possible (e.g., `TypeError`, `RangeError`, `ReferenceError`, `URIError`, `SyntaxError`) instead of the generic `Error` class. **However, if the error context does not logically fit any of the specialized constructors, the generic `Error` class must be used to avoid misclassification.**
 * **Class Property Encapsulation & Management:** For all non-method properties within a JavaScript class, you must implement them using private fields (e.g., `#propertyName`) accompanied by explicit `getters` and `setters`. The `setter` must include rigorous validation logic to ensure the property cannot be assigned an invalid value, effectively acting as an automated and secure value manager for the class instance.
 
