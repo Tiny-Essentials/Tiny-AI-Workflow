@@ -1,6 +1,10 @@
 ## Title
 
-I need jsDoc where it doesn't exist
+JSDoc Enforcer
+
+## Description
+
+A specialized JSDoc enforcement agent. It analyzes JavaScript code to identify missing documentation, generates accurate English descriptions for utilities, and ensures proper structuring of complex parameters and validation tags.
 
 ## Prompt
 

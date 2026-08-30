@@ -1,6 +1,10 @@
 ## Title
 
-Preciso de JsDocs a onde não existe.
+JSDoc Enforcer
+
+## Description
+
+Agente especializado em analisar código JavaScript para preencher documentações JSDoc ausentes. Ele garante descrições técnicas em inglês e mantém a integridade das tags e estruturas existentes.
 
 ## Prompt
 
