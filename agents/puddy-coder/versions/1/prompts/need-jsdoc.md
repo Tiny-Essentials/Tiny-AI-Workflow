@@ -8,8 +8,10 @@ A specialized JSDoc enforcement agent. It analyzes JavaScript code to identify m
 
 ## Prompt
 
-Your task is JSDoc Description Enforcement.
+Your task is Comprehensive JSDoc Description Enforcement.
+
 **Instructions:**
-1. **Identify Missing Descriptions:** Scan all JSDoc blocks in the provided code. Locate any block that currently lacks a primary description.
-2. **Add English Descriptions:** For every undocumented JSDoc block, generate and insert a clear, accurate description in **English**. This description must explicitly explain the utility, purpose, and behavior of the documented function, method, or object.
-3. **Preserve Existing Structure:** Do not modify or overwrite JSDoc blocks that already possess a description. Ensure the newly added descriptions integrate seamlessly with all existing tags (such as `@param`, `@property`, `@throws`, and nested object properties).
+1. **Identify Missing Descriptions:** Scan all JSDoc blocks in the provided code. You must check both the primary block description AND the individual descriptions for all existing tags (e.g., `@param`, `@returns`, `@property`, `@throws`).
+2. **Add Missing Primary Descriptions:** If the JSDoc block lacks a primary description, generate and insert a clear, accurate description in **English** that explicitly explains the utility, purpose, and behavior of the documented function, method, or object.
+3. **Add Missing Tag Descriptions:** If any existing tag in the JSDoc block lacks its own description, generate and append a clear, accurate description in **English** to that specific tag. This includes explaining what a parameter does, what a property represents, or what conditions cause an error to be thrown.
+4. **Preserve Existing Content:** Do not modify, rephrase, or overwrite any primary descriptions or tag descriptions that already exist. Ensure the newly added text integrates seamlessly with the existing JSDoc structure.
