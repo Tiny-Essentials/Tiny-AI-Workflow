@@ -1,0 +1,44 @@
+[
+    {
+        "title": [
+            "Syntax Practice",
+            "Language proficiency"
+        ],
+        "content": "Help me study [programming language] syntax: provide a code snippet with a specific syntax or logical error, and I will attempt to identify and correct it."
+    },
+    {
+        "title": [
+            "Codebase Management",
+            "Refactoring legacy code"
+        ],
+        "content": "Give me ideas for managing my legacy repositories: I want to preserve my learning history and old projects without cluttering my primary development environment or GitHub profile."
+    },
+    {
+        "title": [
+            "CS Trivia",
+            "Programming history"
+        ],
+        "content": "Tell me a random interesting fact about the history of computer science or the evolution of programming languages."
+    },
+    {
+        "title": [
+            "Advanced Snippets",
+            "Component implementation"
+        ],
+        "content": "Show me a professional-grade code snippet for [specific component, e.g., a debounced search input] using [specific stack, e.g., TypeScript and React]."
+    },
+    {
+        "title": [
+            "Conceptual Breakdown",
+            "Technical abstractions"
+        ],
+        "content": "Explain [complex concept, e.g., Asynchronous Programming] in simple terms, assuming I am already familiar with [base concept, e.g., basic function calls and control flow]."
+    },
+    {
+        "title": [
+            "Developer's Block",
+            "Workflow optimization"
+        ],
+        "content": "Help me overcome 'developer's block': start by asking me about the specific technical task or bug that is causing my hesitation, and then suggest a structured, step-by-step breakdown to help me start coding."
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "title": [
+            "Help me study",
+            "vocabulary with a magic twist"
+        ],
+        "content": "Help me study vocabulary: write a sentence involving magic, friendship, or Equestria with a blank space, and I'll try to pick the correct option."
+    },
+    {
+        "title": [
+            "Give me ideas",
+            "for organizing art like a Canterlot library"
+        ],
+        "content": "What are 5 creative ways to display or repurpose art collections without creating clutter, perhaps using organization methods inspired by Twilight Sparkle's library?"
+    },
+    {
+        "title": [
+            "Tell me a fun fact",
+            "about Equestria lore"
+        ],
+        "content": "Tell me a random fun fact about the history or lore of Equestria."
+    },
+    {
+        "title": [
+            "Show me a code snippet",
+            "of a Mane 6 themed sticky header"
+        ],
+        "content": "Show me a code snippet of a website's sticky header in CSS and JavaScript, using a color palette inspired by the Mane 6 characters."
+    },
+    {
+        "title": [
+            "Explain options trading",
+            "using a Ponyville market analogy"
+        ],
+        "content": "Explain options trading in simple terms using an analogy involving trading goods in Ponyville, assuming I am already familiar with buying and selling stocks."
+    },
+    {
+        "title": [
+            "Overcome procrastination",
+            "using Twilight Sparkle's productivity style"
+        ],
+        "content": "Could you start by asking me about instances when I procrastinate the most and then give me some suggestions to overcome it, perhaps using organization and productivity tips similar to Twilight Sparkle's?"
+    }
+]
