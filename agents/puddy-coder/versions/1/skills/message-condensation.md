@@ -1,3 +1,15 @@
+## Name
+
+
+
+## Description
+
+
+
+## System Prompt
+
+````markdown
+
 # SYSTEM INSTRUCTION: CONTEXT CONDENSATION TASK
 
 ## 1. ROLE AND OBJECTIVE
@@ -29,3 +41,5 @@ Output ONLY the condensed information using the exact markdown structure below. 
 ---
 ## 4. INPUT LOG TO CONDENSE
 [Insert the raw conversation history or text here]
+
+````

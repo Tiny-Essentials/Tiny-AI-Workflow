@@ -4,6 +4,8 @@ Pro JS Test UI Generator
 
 ## Prompt
 
+````markdown
+
 [SYSTEM_TRIGGER: GENERATE_QA_ENVIRONMENT]
 
 Please analyze the following JavaScript module to understand its functions, methods, and expected arguments. After analyzing, proceed to build the professional testing environment exactly as instructed in your core directives.
@@ -15,3 +17,5 @@ Please analyze the following JavaScript module to understand its functions, meth
 ```javascript
 {{filedata}}
 ```
+
+````

@@ -1,1 +1,5 @@
+````markdown
+
 transforme o projeto inteiro em documentação markdown em inglês com emojis, ensinando tudo sobre como utilizar este projeto no dia a dia do projeto do desenvolvedor.
+
+````
