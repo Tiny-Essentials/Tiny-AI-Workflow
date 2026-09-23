@@ -69,7 +69,8 @@
                 }
             ],
             "defaultFeatureIds": [
-                "web_search"
+                "web_search",
+                "image_generation"
             ]
         },
         "access_grants": [],
