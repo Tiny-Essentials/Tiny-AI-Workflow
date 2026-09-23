@@ -11,7 +11,7 @@
             "num_ctx": 1048576,
             "think": true,
             "custom_params": {
-                "reasoning_effort": "max"
+                "reasoning_effort": "xhigh"
             }
         },
         "meta": {
