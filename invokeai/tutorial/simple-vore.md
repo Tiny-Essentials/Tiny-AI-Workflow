@@ -155,7 +155,7 @@ description. Do not rewrite the scene prompt.
 <quality tags>, <style tags>,
 <original scene prompt from Step 1>,
 <predator description>, <predator pose>,
-<pray description>, <prey pose>, <prey expression>,
+<prey description>, <prey pose>, <prey expression>,
 <lighting>, <environment>
 
 # Negative prompt template
