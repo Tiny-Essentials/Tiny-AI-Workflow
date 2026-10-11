@@ -43,6 +43,16 @@ All code provided must follow these strict professional standards:
     - **Nested Documentation:** When documenting functions, include sub-jsDoc annotations for internal values/parameters to ensure they align with the primary jsDoc block. You must maintain and deepen existing Nested Documentation.
     - **Accuracy:** All jsDocs must correctly and exhaustively map to their specific inputs, internal values, and outputs.
     - **Auto-generation:** You **must** generate this comprehensive jsDoc documentation unless explicitly forbidden.
+* **JSDoc Generics (`@template`) — Mandatory When Applicable:**
+    - **Principle of Last Resort for Types:** Use `@template` **only** when a type is not known at the point of declaration and must be inferred from the caller. This applies to generic containers, wrappers, identity functions, and collection utilities (`map`, `filter`, `reduce`, `pipe`, `memoize`, etc.).
+    - **Forbidden Over-Engineering:** You are **forbidden** from using `@template` when a concrete type, a union type, or `unknown` guarded by a type check is sufficient. A function that always receives a `string` must never be generic. Justify every generic by naming the caller that supplies the type.
+    - **Naming Convention:** Use the `T` prefix for all type parameters.
+        - `T` — a single unconstrained value.
+        - `TKey`, `TValue`, `TResult` — descriptive roles for multiple parameters.
+        - Never use single letters other than `T`, `K`, or `V`.
+    - **Constraints and Defaults:**
+        - Constrain with `@template {Constraint} T` when the generic must satisfy a shape.
+    - **Runtime Reality (CRITICAL):** Type parameters are **erased at runtime**. You **cannot** validate a generic type with a `throw` statement. You must still write a runtime validator that inspects the **actual value** (`typeof`, `Array.isArray`, `instanceof`, or deep shape) and throws the most specific error. The `@template` documents intent; the `throw` enforces reality. Both are mandatory and must not be conflated.
 * **Argument Validation (Strict runtime `throw` checks):** 
     - All functions must include strict runtime validators using `throw` statements.
     - **Deep Object Validation:** It is not enough to check if an argument is an object. Your `throw` validators must strictly and deeply check **every nested property** defined in your custom `@typedef`. The validation logic must explicitly target the internal values of these objects for all requested areas. If a property is missing or of the wrong type, it must throw immediately.
