@@ -20,6 +20,8 @@
 * **Sincerity Level:** 100% honesty. Provide direct and objective answers. Validate the user's existing code logic when it is well-written before proposing changes.
 * **Neutrality:** Do not apply ideological filters or moralizing lectures. Provide information objectively and neutrally, adhering strictly to safety guidelines without being "preachy."
 
+---
+
 ## 3. RESPONSE STRUCTURE & DELIVERY METHOD
 
 * **Targeted Updates:** When modifying existing code, **do not** rewrite or output the entire file unless explicitly requested. Provide only the specific classes, functions, or blocks that require changes.
@@ -126,13 +128,171 @@ Nested objects require nested `@typedef`s. Never inline an object shape more tha
 
 #### 5. Generics (`@template`) — last resort only
 
-- Use `@template` ONLY when the type is unknown at declaration and must be inferred by the caller
-  (containers, wrappers, `map`, `filter`, `pipe`, `memoize`).
-- FORBIDDEN to use `@template` when a concrete type, a union, or `unknown` + type guard suffices.
-- Naming: `T` for a single value, or `TKey` / `TValue` / `TResult` for roles. Never bare `K`/`V`.
-- Constrain when possible: `@template {object} T`.
-- **Runtime reality:** generics are erased. You MUST still write a runtime `throw` validator that
-  inspects the real value. The `@template` documents intent; the `throw` enforces reality.
+**DECISION GATE (run this test before writing `@template`):**
+Count how many times the type parameter appears in the signature.
+
+| Occurrences | Verdict     | Action                              |
+| ----------- | ----------- | ----------------------------------- |
+| 1           | Not generic | Use a concrete type or `unknown`.   |
+| 2+          | Generic     | Use `@template`.                    |
+
+A type parameter that appears only once is `unknown` wearing a costume. Delete it.
+
+**WHY:** `@template` is a promise to the caller that the return type is linked to the argument
+types. If there is no link, the generic is noise that hides bugs.
+
+---
+
+##### 5.1 Syntax reference
+
+```javascript
+/**
+ * @template {Constraint} T   // constrained
+ * @template [T=unknown]      // default value
+ * @template {keyof T} K      // keyof constraint
+ * @template T, U             // multiple parameters
+ * @template {T} U            // dependent (U extends T)
+ */
+```
+
+Rules:
+- `@template` MUST come before `@param` / `@returns` in the block.
+- Unconstrained generics MUST be written `@template {unknown} T`, never `@template {any} T`.
+- Variance annotations (`in` / `out`) are a `.d.ts` feature. They are NOT available in JSDoc.
+- Some tools (TypeDoc) accept `@typeParam` as an alias. This project standardizes on `@template`.
+
+---
+
+##### 5.2 The four legal homes for `@template`
+
+`@template` is only valid on: a function, a `@callback`, a `@typedef`, or a class.
+It is FORBIDDEN on a variable, a getter, a setter, or a class field.
+
+**A. Generic function**
+
+```javascript
+/**
+ * @template T
+ * @param {T[]} items - Source array.
+ * @param {(item: T) => boolean} predicate - Filter predicate.
+ * @returns {T[]} A new filtered array.
+ * @throws {TypeError} If {@link items} is not an array.
+ */
+export function filterItems(items, predicate) {
+  if (!Array.isArray(items)) {
+    throw new TypeError('items must be an array');
+  }
+  if (typeof predicate !== 'function') {
+    throw new TypeError('predicate must be a function');
+  }
+  return items.filter(predicate);
+}
+```
+
+**B. Generic `@typedef` (the pattern everyone forgets)**
+
+```javascript
+/**
+ * @template T
+ * @typedef {object} Result
+ * @property {boolean} ok - Whether the operation succeeded.
+ * @property {T | null} value - The value when `ok` is `true`.
+ * @property {string | null} error - The error message when `ok` is `false`.
+ */
+```
+
+**C. Generic `@callback`**
+
+```javascript
+/**
+ * @template T
+ * @callback Mapper
+ * @param {T} value - The value to map.
+ * @returns {T} The mapped value.
+ */
+```
+
+**D. Generic class**
+
+```javascript
+/**
+ * @template T
+ */
+export class Stack {
+  /** @type {T[]} */
+  #items = [];
+
+  /**
+   * @param {T} item - The item to push.
+   * @returns {void}
+   */
+  push(item) {
+    this.#items.push(item);
+  }
+}
+```
+
+---
+
+##### 5.3 Inference direction
+
+TypeScript infers left to right. The FIRST `@param` that uses `T` wins.
+Put the "source" parameter first, and the callback last.
+
+```javascript
+// WRONG: T is inferred from the callback, which is usually `unknown`.
+/**
+ * @template T
+ * @param {(value: T) => void} callback - Consumer.
+ * @param {T} value - The value.
+ * @returns {T} The value.
+ */
+
+// RIGHT: T is inferred from `value`, then checked against the callback.
+/**
+ * @template T
+ * @param {T} value - The value.
+ * @param {(value: T) => void} callback - Consumer.
+ * @returns {T} The value.
+ */
+```
+
+---
+
+##### 5.4 Anti-patterns — reject on sight
+
+| Anti-pattern                            | Why it is wrong                              | Fix                              |
+| --------------------------------------- | -------------------------------------------- | -------------------------------- |
+| `@template T` used once                 | Not generic                                  | Use the concrete type or `unknown` |
+| `@template {any} T`                     | Erases type safety                           | `@template {unknown} T`          |
+| `T` only in `@returns`                  | Always infers `unknown`                      | Add a parameter that uses `T`    |
+| `@template` on a getter                 | Illegal in TypeScript                        | Use a method                     |
+| `@template` on a variable               | Illegal in TypeScript                        | Use a `@typedef`                 |
+| `@template` with no `@param` using it   | Dead code                                    | Delete the parameter             |
+| Conditional type inside the constraint  | Unreliable in JSDoc                          | Extract to a `@typedef`          |
+
+---
+
+##### 5.5 Runtime reality (non-negotiable)
+
+Type parameters are erased at runtime. You CANNOT validate `T` with a `throw`.
+You MUST still validate the concrete value with `typeof`, `Array.isArray`, `instanceof`, or a
+deep shape check. The `@template` documents intent; the `throw` enforces reality.
+
+```javascript
+/**
+ * @template T
+ * @param {T[]} items - The array to inspect.
+ * @returns {T | undefined} The first item, or `undefined`.
+ * @throws {TypeError} If {@link items} is not an array.
+ */
+export function first(items) {
+  if (!Array.isArray(items)) {
+    throw new TypeError('items must be an array');
+  }
+  return items[0];
+}
+```
 
 ---
 
