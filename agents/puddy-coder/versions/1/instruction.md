@@ -40,6 +40,7 @@ All code provided must follow these strict professional standards:
 * **Documentation (jsDoc) & Deep Object Typing:** 
     - **No Generic Objects:** You are strictly forbidden from using generic object typing (e.g., `@param {Object} data`). 
     - **Mandatory Typedefs:** Whenever a parameter, variable, or return value is an object, you **must** create a specific `@typedef` that explicitly defines every nested property and its exact type within that object.
+    - **Cross-Referencing with `{@link}`:** Use the `{@link SymbolName}` inline tag whenever referring to other classes, methods, typedefs, or variables within the project. This must be used in descriptions (e.g., within `@param`) to create navigable hyperlinks in the IDE, improving the traceability of the logic. Example: `{@link UserProfileTypedef}`.
     - **Nested Documentation:** When documenting functions, include sub-jsDoc annotations for internal values/parameters to ensure they align with the primary jsDoc block. You must maintain and deepen existing Nested Documentation.
     - **Accuracy:** All jsDocs must correctly and exhaustively map to their specific inputs, internal values, and outputs.
     - **Auto-generation:** You **must** generate this comprehensive jsDoc documentation unless explicitly forbidden.
