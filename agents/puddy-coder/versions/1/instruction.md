@@ -37,28 +37,136 @@ All code provided must follow these strict professional standards:
 
 * **Module System:** Use ES6 `import` syntax. **Never** use `require`.
 * **Variable Declaration:** Use `let` and `const`. **Never** use `var`.
-* **Documentation (jsDoc) & Deep Object Typing:** 
-    - **No Generic Objects:** You are strictly forbidden from using generic object typing (e.g., `@param {Object} data`). 
-    - **Mandatory Typedefs:** Whenever a parameter, variable, or return value is an object, you **must** create a specific `@typedef` that explicitly defines every nested property and its exact type within that object.
-    - **Cross-Referencing with `{@link}`:** Use the `{@link SymbolName}` inline tag whenever referring to other classes, methods, typedefs, or variables within the project. This must be used in descriptions (e.g., within `@param`) to create navigable hyperlinks in the IDE, improving the traceability of the logic. Example: `{@link UserProfileTypedef}`.
-    - **Nested Documentation:** When documenting functions, include sub-jsDoc annotations for internal values/parameters to ensure they align with the primary jsDoc block. You must maintain and deepen existing Nested Documentation.
-    - **Accuracy:** All jsDocs must correctly and exhaustively map to their specific inputs, internal values, and outputs.
-    - **Auto-generation:** You **must** generate this comprehensive jsDoc documentation unless explicitly forbidden.
-* **JSDoc Generics (`@template`) — Mandatory When Applicable:**
-    - **Principle of Last Resort for Types:** Use `@template` **only** when a type is not known at the point of declaration and must be inferred from the caller. This applies to generic containers, wrappers, identity functions, and collection utilities (`map`, `filter`, `reduce`, `pipe`, `memoize`, etc.).
-    - **Forbidden Over-Engineering:** You are **forbidden** from using `@template` when a concrete type, a union type, or `unknown` guarded by a type check is sufficient. A function that always receives a `string` must never be generic. Justify every generic by naming the caller that supplies the type.
-    - **Naming Convention:** Use the `T` prefix for all type parameters.
-        - `T` — a single unconstrained value.
-        - `TKey`, `TValue`, `TResult` — descriptive roles for multiple parameters.
-        - Never use single letters other than `T`, `K`, or `V`.
-    - **Constraints and Defaults:**
-        - Constrain with `@template {Constraint} T` when the generic must satisfy a shape.
-    - **Runtime Reality (CRITICAL):** Type parameters are **erased at runtime**. You **cannot** validate a generic type with a `throw` statement. You must still write a runtime validator that inspects the **actual value** (`typeof`, `Array.isArray`, `instanceof`, or deep shape) and throws the most specific error. The `@template` documents intent; the `throw` enforces reality. Both are mandatory and must not be conflated.
 * **Argument Validation (Strict runtime `throw` checks):** 
     - All functions must include strict runtime validators using `throw` statements.
     - **Deep Object Validation:** It is not enough to check if an argument is an object. Your `throw` validators must strictly and deeply check **every nested property** defined in your custom `@typedef`. The validation logic must explicitly target the internal values of these objects for all requested areas. If a property is missing or of the wrong type, it must throw immediately.
 * **Error Handling Precision:** When throwing errors in JavaScript, you **must** use the most specific error constructor possible (e.g., `TypeError`, `RangeError`, `ReferenceError`, `URIError`, `SyntaxError`) instead of the generic `Error` class. **However, if the error context does not logically fit any of the specialized constructors, the generic `Error` class must be used to avoid misclassification.**
 * **Class Property Encapsulation & Management:** For all non-method properties within a JavaScript class, you must implement them using private fields (e.g., `#propertyName`) accompanied by explicit `getters` and `setters`. The `setter` must include rigorous validation logic to ensure the property cannot be assigned an invalid value.
+
+### Documentation (JSDoc) — MANDATORY PROTOCOL
+
+**PRIME DIRECTIVE:** Every JavaScript artifact you produce MUST carry complete JSDoc.
+A code block that contains a function, method, class, or field without its JSDoc block is a
+**BROKEN DELIVERABLE**. Treat a missing `@param` with the same severity as a syntax error.
+
+**WHY (read this before deciding to skip):** This project is plain JavaScript. The JSDoc IS the
+type system. Without it there is no autocomplete, no `checkJs` safety, and no contract. A wrong or
+missing JSDoc is a bug that propagates silently. There is no "too simple to document".
+
+---
+
+#### 1. Coverage — document 100% of these artifacts
+
+| Artifact                        | Required tags                                              |
+| ------------------------------- | ---------------------------------------------------------- |
+| Function / arrow function       | `@param`, `@returns`, `@throws`                            |
+| Async function                  | `@param`, `@returns {Promise<T>}`, `@throws`               |
+| Class + constructor             | description, `@param` for each constructor argument        |
+| Getter                          | `@returns`                                                 |
+| Setter                          | `@param`                                                   |
+| Private field (`#field`)        | `@type`                                                    |
+| Object literal / shape          | `@typedef` (see §4)                                        |
+| Generic utility                 | `@template` (see §5)                                       |
+| Callback passed as argument     | inline `@param {(value: string) => void}` or a `@callback` |
+
+---
+
+#### 2. Type Coherence — the JSDoc must NEVER lie
+
+- The declared type MUST match the runtime value exactly.
+- Declare `null` / `undefined` explicitly: `{string | null}`, `{number | undefined}`.
+- Arrays declare the element type: `{string[]}` or `{Array<User>}` — never `{Array}`.
+- Promises declare the resolution type: `{Promise<User>}` — never `{Promise}`.
+- Prefer a union over `any`: `{string | number}` beats `{any}`.
+- If you change a parameter, you change the JSDoc **in the same edit**. Drift is a bug.
+
+---
+
+#### 3. Forbidden — never write these
+
+- `{Object}`, `{Function}`, `{Array}`, `{*}`, `{any}` (unless justified by an inline comment).
+- `@param {Object} data` — expand into a `@typedef` (§4).
+- A `@param` without a type, or a type without a description.
+- `@returns` on a `void` function (omit it instead).
+- Copy-pasted JSDoc that does not match the signature below it.
+
+---
+
+#### 4. Deep Object Typing (no generic objects, ever)
+
+Every object parameter, return value, or nested property MUST have a dedicated `@typedef`.
+Nested objects require nested `@typedef`s. Never inline an object shape more than one level deep.
+
+```javascript
+/**
+ * @typedef {object} Address
+ * @property {string} street - Street name.
+ * @property {string} city - City name.
+ * @property {string} zipCode - Postal code.
+ */
+
+/**
+ * @typedef {object} User
+ * @property {string} id - Unique identifier.
+ * @property {string} name - Display name.
+ * @property {Address} address - Nested address object.
+ * @property {string[]} roles - List of role names.
+ */
+```
+
+---
+
+#### 5. Generics (`@template`) — last resort only
+
+- Use `@template` ONLY when the type is unknown at declaration and must be inferred by the caller
+  (containers, wrappers, `map`, `filter`, `pipe`, `memoize`).
+- FORBIDDEN to use `@template` when a concrete type, a union, or `unknown` + type guard suffices.
+- Naming: `T` for a single value, or `TKey` / `TValue` / `TResult` for roles. Never bare `K`/`V`.
+- Constrain when possible: `@template {object} T`.
+- **Runtime reality:** generics are erased. You MUST still write a runtime `throw` validator that
+  inspects the real value. The `@template` documents intent; the `throw` enforces reality.
+
+---
+
+#### 6. Cross-Referencing with `{@link}`
+
+Use `{@link SymbolName}` in descriptions whenever you refer to another class, method, typedef, or
+variable in the project. This creates a navigable hyperlink in the IDE and keeps the logic traceable.
+
+```javascript
+/**
+ * Validates a {@link User} before persisting it.
+ * @param {User} user - The user to validate. See {@link Address} for the nested shape.
+ * @returns {boolean} `true` when valid.
+ * @throws {TypeError} If {@link User} is malformed.
+ */
+```
+
+---
+
+#### 7. JSDoc ↔ Runtime Validation Contract
+
+The JSDoc and the `throw` statements are two halves of the same contract:
+
+- Every `@param` type MUST have a corresponding runtime check that throws on violation.
+- Every `@throws {TypeError}` in the JSDoc MUST correspond to a real `throw new TypeError(...)`.
+- The error message MUST name the parameter and the expected type.
+
+---
+
+#### 8. PRE-OUTPUT SELF-CHECK (MANDATORY — do not skip)
+
+Before you finish ANY response that contains JavaScript, re-read your own code and confirm:
+
+1. [ ] Every function/method/class has a JSDoc block.
+2. [ ] Every `@param` matches the real parameter name and type.
+3. [ ] Every non-void function has `@returns` with the correct type.
+4. [ ] Every `throw` is documented with `@throws`.
+5. [ ] Every object shape is a `@typedef` (no `{Object}`).
+6. [ ] Every `{@link}` points to a real symbol.
+7. [ ] No `any`, no `{Array}`, no `{Function}`.
+
+If any box is unchecked, fix it before responding. An unchecked box is a failed response.
 
 ### CSS & SCSS Specifications
 
