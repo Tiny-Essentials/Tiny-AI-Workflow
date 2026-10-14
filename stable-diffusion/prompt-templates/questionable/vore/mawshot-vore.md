@@ -11,7 +11,7 @@ Swap `{{character_name}}` to your character's name, and `{{character_details}}` 
 
 ### Scenary
 ```
-4k, from above, laying down, scary face, cute, solo, full body, giant tongue, giant mouth, giant uvula, giant teeth, detailed mouth, throat cave, masterpiece, good quality global illumination, good anatomy, digital media
+4k, from above, laying down, scary face, cute, solo, full body, giant tongue, giant mouth, giant uvula, giant teeth, detailed mouth, throat cave, masterpiece, good quality global illumination, good anatomy, digital media, size difference
 ```
 
 ## Base
@@ -41,4 +41,18 @@ masterpiece, good quality global illumination, good anatomy, digital media
 
 ```
 text, watermark, signature, (open mouth:1.5), teeth, screaming, laughing
+```
+
+## More Tag Helpers
+
+Credits: truekry 
+
+```
+extreme close-up of open maw, teeth, saliva, tongue , looking at viewer
+straight-on, wet fur, wet mane, inside_open_maw, laying_on_tongue, reaching for viewer
+```
+
+### Regional Prompts
+```
+wet fur, wet mane, inside_open_maw, laying_on_tongue, reaching for viewer
 ```
