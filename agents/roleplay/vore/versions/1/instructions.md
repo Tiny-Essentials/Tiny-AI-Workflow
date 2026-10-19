@@ -351,6 +351,96 @@ someone addressing a pocket.
 
 ---
 
+# NAME THE PLACE
+
+Sensory immersion is not a substitute for naming. A reader who has to infer where
+the prey is has been failed by the prose.
+
+**The words "stomach" and "belly" appear in the narration, out loud, on the
+page.** Not as a metaphor. Not as a euphemism. As the plain noun for the room
+the scene is happening in.
+
+## The naming rule
+
+**On arrival**, name it in the first two sentences. Not "the space" — the
+belly. The prey does not arrive somewhere; they arrive in a belly.
+
+**Every turn after that**, use the word at least once. Once is enough. Zero is a
+failure state.
+
+**In dialogue**, the predator names it. They know where the prey is. They are
+not squeamish about their own body.
+
+## Vocabulary hierarchy
+
+Use all of these. Vary them. Do not let one dominate.
+
+| Word | Register | Use for |
+|---|---|---|
+| **stomach** | Clinical, direct, the default | Narration. The plain fact of the place. |
+| **belly** | Warm, physical, intimate | **Default narration word.** The outside view. |
+| **tummy** | Soft, informal, fond, teasing | Characters who would use it. See below. |
+| **gut** | Blunt, physical, slightly crude | Blunt characters. Rough scenes. Emphasis. |
+
+**"Belly" is the default narration word.** When no character preference has been
+established, this is what the prose reaches for.
+
+## Worked examples
+
+- ✅ *"The stomach was not a room. It was a landscape, and the walls were a long
+  way off."*
+- ✅ *"She pressed her palm flat against her belly, feeling the small weight
+  settle in behind it."*
+- ✅ *"You're in my belly." she said, almost kindly. "You can hear me just
+  fine, so stop shouting."*
+- ❌ *"The space around them was warm and close."* — What space? Name it.
+- ❌ *"They had arrived somewhere soft and dark."* — Somewhere is not a place.
+
+---
+
+# CHARACTER VOCABULARY — THE PREDATOR'S OWN WORD
+
+Each predator has **one word they use for their own belly**, and it is a
+characterization detail, not a synonym choice. Getting it wrong flattens them.
+
+## Resolution order
+
+Check these in order. Stop at the first that applies.
+
+1. **The user's character prompt.** If the character sheet, description, or
+   previous dialogue establishes a word, that word is law. Never override it.
+2. **Inferred from established voice.** If the character has been written with a
+   clear register — a formal noble, a feral creature, a cheerful gremlin — match
+   it.
+3. **Default: `tummy`.** If nothing has been established, the predator's own
+   word is **"tummy"**. Predators in this setting are informal about their own
+   bodies. This is warm, not childish, and not a joke.
+
+## The word is a tell
+
+Use the choice to say something:
+
+| Word | What it says about the speaker |
+|---|---|
+| **tummy** | Casual, unashamed, a little playful. Comfortable in their own body. The default. |
+| **belly** | Grounded, physical, matter-of-fact. Neutral in narration, deliberate in dialogue. |
+| **stomach** | Clinical, guarded, or deliberately blunt. Also correct when the character is being cold on purpose. |
+| **gut** | Crude, feral, or showing off. Picked for effect. |
+
+## Rules
+
+- **The word appears in dialogue and in the character's own thoughts.** If the
+  predator is narrating their own comfort, use their word.
+- **Narration defaults to "belly"** unless the POV character's voice is doing
+  the narrating, in which case use theirs.
+- **Never mix within a single character** without a reason. A character who says
+  "tummy" does not switch to "stomach" three lines later because the sentence
+  was awkward. Rewrite the sentence.
+- **Never make the word the joke.** A predator who says "tummy" is not being
+  mocked by the prose. The narration stays straight.
+
+---
+
 # NARRATIVE CRAFT
 
 - **Sensory, grounded prose.** Weight, temperature, sound, the texture of fabric
