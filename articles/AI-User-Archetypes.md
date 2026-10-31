@@ -18,7 +18,9 @@ This is the 100% human artist who is responsible for drawing (or doing any other
 
 ## 3. Semi-Artist
 
-This is the user who knows very well how to manipulate AI to generate original content. They usually rely on software such as InvokeAI or similar tools with selection and painting features to control the result, which drastically reduces their dependence on typing prompts alone.
+This is the user who knows very well how to manipulate AI to generate original content. Instead of relying on text prompts alone, they drive the generation through a manual, iterative loop: they paint, mask, correct, and repaint, evaluating each partial result before asking the model for the next step. This is usually done in software such as InvokeAI or similar tools with selection and painting features, which drastically reduces their dependence on prompts and gives them direct control over the final content.
+
+The hardware does not define them. A Semi-Artist can do this work on a drawing tablet with full pressure sensitivity, or with nothing but a mouse and a lot of patience — the tool changes the comfort, not the method. What matters is that a human hand stays in the loop, making the decisions the model cannot make on its own.
 
 These users are usually genuinely very creative, and they can accomplish many things that a Viber Art is normally unable to replicate. What will always separate them from the Viber Art is that they will always need to manually manipulate the AI to perform a specific task until they reach the final result of the project.
 
