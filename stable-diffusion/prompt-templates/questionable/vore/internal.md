@@ -27,7 +27,7 @@ Tested with InvokeAI (Nova Furry XL v17.0) in the canvas mode using a custom ras
 Positive Prompt:
 
 ```
-vore, (solo)1.2, female, 1girl, mlp, full body, {character-info}, laying on side, darkness stomach background, no light, internal background, masterpiece, good quality global illumination, good anatomy, digital media, 2D anime, in stomach, size difference, micro pony
+vore, (solo)1.2, female, 1girl, full body, {character-info}, laying on side, darkness stomach background, no light, internal background, masterpiece, good quality global illumination, good anatomy, digital media, 2D anime, in stomach, size difference, micro pony
 ```
 
 Negative Prompt:
